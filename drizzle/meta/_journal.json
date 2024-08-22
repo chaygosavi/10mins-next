@@ -15,6 +15,27 @@
       "when": 1724259170999,
       "tag": "0001_swift_mephisto",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1724348935908,
+      "tag": "0002_chubby_paper_doll",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1724349157133,
+      "tag": "0003_warm_smasher",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1724349803342,
+      "tag": "0004_robust_wonder_man",
+      "breakpoints": true
     }
   ]
 }
