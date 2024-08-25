@@ -36,6 +36,27 @@
       "when": 1724349803342,
       "tag": "0004_robust_wonder_man",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1724572194226,
+      "tag": "0005_ambiguous_the_renegades",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1724582101343,
+      "tag": "0006_clammy_alex_wilder",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1724582612198,
+      "tag": "0007_chilly_longshot",
+      "breakpoints": true
     }
   ]
 }
