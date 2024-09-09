@@ -29,8 +29,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Sidebar from "./_components/sidebar";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth/authOptions";
 
 const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
