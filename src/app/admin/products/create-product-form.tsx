@@ -15,10 +15,12 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-type Props = {};
-type FormValues = z.input<typeof productSchema>;
+type Props = {
+  onSubmit: (formValues: FormValues) => void;
+};
+export type FormValues = z.input<typeof productSchema>;
 
-const CreateProductForm = (props: Props) => {
+const CreateProductForm = ({ onSubmit }: Props) => {
   const form = useForm<z.infer<typeof productSchema>>({
     resolver: zodResolver(productSchema),
     defaultValues: {
@@ -30,7 +32,9 @@ const CreateProductForm = (props: Props) => {
 
   const fileRef = form.register("image");
 
-  const handleSubmit = (values: FormValues) => {};
+  const handleSubmit = (values: FormValues) => {
+    onSubmit(values);
+  };
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
@@ -80,7 +84,14 @@ const CreateProductForm = (props: Props) => {
             <FormItem>
               <FormLabel>Price</FormLabel>
               <FormControl>
-                <Input type="number" {...field} />
+                <Input
+                  type="number"
+                  {...field}
+                  onChange={(e) => {
+                    const value = parseFloat(e.target.value);
+                    field.onChange(value);
+                  }}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
